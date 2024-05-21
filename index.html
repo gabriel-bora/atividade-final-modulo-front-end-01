@@ -13,8 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Titillium+Web:ital,wght@0,900;1,600&display=swap"
       rel="stylesheet"
     />
+    <script src="index.js"></script>
   </head>
   <body>
+    <!-- O meu header é vertical, tentei fazer desse jeito, achei que ficava mais interessante -->
     <header>
       <nav>
         <ul class="ul-navegador">
@@ -30,12 +32,13 @@
             >
           </li>
           <li class="lista-navegador">
-            <a class="link-navegador" href="./objetivos.html">OBJETIVOS</a>
+            <a class="link-navegador" href="./portfolio.html">PORTFOLIO</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
+      <!-- Fiz uma section para conter o background e também uma escrita deitada na vertical no canto direito da página, vi em uma rede social, achei legal e resolvi testar -->
       <section id="background">
         <h1 id="escrita-fundo">Gabriel Bora</h1>
       </section>
@@ -45,15 +48,15 @@
           <a
             class="informacao"
             id="informacao-1"
-            href="https://goo.gl/maps/7aypbLD6oYzEGq9W8"
+            href="https://maps.app.goo.gl/fb8L4qjThZfqRRN68"
             target="_blank"
             rel="noopener noreferrer"
           >
-            R. Deputado Nilson Ribas, 122
+            R. Paulo Ziliotto, 85
           </a>
-          <a class="informacao" href="mailto:gabriel.bora.10@gmail.com"
-            >gabriel.bora.10@gmail.com</a
-          >
+          <button class="informacao" id="botaoemail" onclick="abrirModal()">
+            gabriel.bora.10@gmail.com
+          </button>
           <a
             class="informacao"
             href="https://api.whatsapp.com/send?phone=5541992119612"
@@ -123,5 +126,26 @@
         </div>
       </section>
     </main>
+    <!-- Aqui fiz um modal para brincar um pouco com javascript e ter um lugar melhor para colocar o meu form -->
+    <div class="modal">
+      <div class="content">
+        <form action="">
+          <h1 class="emailModal">Envie um e-mail:</h1>
+          <label for="nome" class="textoModal">Nome: </label>
+          <input type="text" name="nome" id="nome" />
+          <br />
+          <br />
+          <label for="email" class="textoModal">E-mail: </label>
+          <input type="email" name="email" id="email" />
+          <br />
+          <br />
+          <label for="mensagem" class="textoModal">Mensagem: </label>
+          <input type="text" name="mensagem" id="mensagem" />
+          <br />
+          <br />
+          <input type="button" name="enviar" id="enviar" value="Enviar" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
